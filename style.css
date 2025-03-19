@@ -1,0 +1,136 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #fff0e5;
+}
+#home {
+  background-color: #ffd300;
+}
+
+header {
+  padding: 20px 0;
+}
+header,
+footer {
+  background-color: #ffd300;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.jumbotron {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("https://cdn.pixabay.com/photo/2022/01/25/22/09/black-throated-sunbird-6967439_1280.jpg");
+  background-size: cover;
+  color: #302e87;
+  height: 400px;
+  background-position: center center;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.jumbotron h3 {
+  margin: 1rem 0;
+}
+#about .jumbotron {
+  height: 260px;
+}
+
+#about .jumbotron h2 {
+  position: relative;
+  top: -20px;
+}
+#qualifications .jumbotron {
+  display: flex;
+  align-items: flex-end;
+}
+
+#qualifications .box {
+  border: 1px solid black;
+  text-align: center;
+  padding: 20px;
+  margin: 1rem;
+}
+
+.col-sm-6 p {
+  margin: 10px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fbd1d5;
+  background-color: #ffffff;
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #fbd1d5;
+}
+
+.btn-secondary {
+  background-color: #2a70e0;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+
+.portrait {
+  width: 350px;
+  height: 300px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-bottom: 30px;
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
