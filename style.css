@@ -1,136 +1,170 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/*colour scheme*/
+:root{
+    --main-green: #586354;
+    --muted-red: #892d47;
+    --dark-yellow: #DBB26D;
+    --off-white: #E1CFCB;
+}
+
 body {
-  font-family: Roboto, sans-serif;
-  background-color: #fff0e5;
+    background-color: var(--dark-yellow);
 }
-#home {
-  background-color: #ffd300;
+ 
+header{
+    height: 45px;
+    background-color: var(--dark-yellow);
 }
+/*navbar styling*/
 
-header {
-  padding: 20px 0;
+nav ul li {
+  display: inline;
+  text-decoration: none;
+  margin-right: 15px;
+  color: var(--main-green);
+  
 }
-header,
-footer {
-  background-color: #ffd300;
+#navbar {
+  position: fixed;
+  top: 5px;
+  right: 0;
+  
+  
 }
-
-header .row,
-footer .row {
-  display: flex;
-  align-items: center;
+nav ul {
+    margin-right: 15px
+           
 }
-
-h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
 nav a {
-  padding: 0 0.5rem;
-  font-size: 1.1rem;
-  margin: 0;
-  text-align: center;
+    /*color: #AE1B47;*/
+    color: black;
+    font-size: 1.2rem
 }
 
-.jumbotron {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    url("https://cdn.pixabay.com/photo/2022/01/25/22/09/black-throated-sunbird-6967439_1280.jpg");
-  background-size: cover;
-  color: #302e87;
-  height: 400px;
-  background-position: center center;
+nav a:hover {
+    color: var(--muted-red);
 }
 
-.jumbotron h2 {
-  font-size: 60px;
-  font-weight: 700;
-  margin: 0;
+/*welcome section*/
+#welcome-section {
+    background: url("https://cdn.pixabay.com/photo/2015/05/25/14/29/tea-783352_1280.jpg") center center;
+    background-size: cover;
+    height: 100vh;   
 }
 
-.jumbotron h3 {
-  margin: 1rem 0;
+#welcome-section h1 {
+    padding-top: 10px;
+    font-family: 'Salsa', cursive;
+    font-size: 3rem;
+    color: var(--main-green);
+    text-align: center;
 }
-#about .jumbotron {
-  height: 260px;
-}
-
-#about .jumbotron h2 {
-  position: relative;
-  top: -20px;
-}
-#qualifications .jumbotron {
-  display: flex;
-  align-items: flex-end;
-}
-
-#qualifications .box {
-  border: 1px solid black;
-  text-align: center;
-  padding: 20px;
-  margin: 1rem;
+    
+ /*projects section*/   
+#projects {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
 }
 
-.col-sm-6 p {
-  margin: 10px;
-  line-height: 1.8rem;
-  font-size: 1.2rem;
+
+.project-tile {
+    border: 1px solid black;
+    background-color: var(--off-white);
+    padding: 10px;
+    flex-basis: 30%;
+    
+    
 }
 
-.col-md-6 {
-  margin: 0 0 30px;
+.project-tile img {
+    width: 100%;  
 }
 
-.btn.btn-primary {
-  border-radius: 2px;
-  border: 0px;
-  color: #fbd1d5;
-  background-color: #ffffff;
+.project-tile a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.project-tile a:hover {
+    color: var(--muted-red);
+}
+    
+
+
+
+
+/*contacts section*/
+#footer {
+    min-height: 70px;
+    background-color: var(--muted-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+          
 }
 
-.btn.btn-primary:hover {
-  color: #ffffff;
-  background-color: #fbd1d5;
+#footer a {
+    font-size: 1.2rem;
+    color: var(--dark-yellow);
 }
 
-.btn-secondary {
-  background-color: #2a70e0;
-  color: #ffffff;
-  margin: 0 0 30px;
+#footer a:hover{
+    color: var(--off-white);
 }
 
-.portrait {
-  width: 350px;
-  height: 300px;
+@media only screen and (max-width: 600px){
+    #welcome-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    
+}
+    
+
+
+
+
+
+/*media query for mobile devices*/
+@media only screen and (max-width: 380px) {
+    #welcome-section {
+        background:  Url("https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_1280.jpg") center center;
+        
+    }
+    #welcome-section h1{
+        font-size: 1.8rem;
+    }
+    
+    nav a {
+        color: black;
+        font-size: 1rem;
+    }
+    nav ul {
+        margin-right: 0;
+    }
+    
+    #projects{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-tile{
+        min-width: 70%;
+    }
+    
+    
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-}
 
-figure {
-  margin-bottom: 30px;
-}
 
-footer {
-  font-size: 12px;
-  padding: 20px 0;
-}
-
-footer .col-sm-8 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer ul {
-  list-style: none;
-}
